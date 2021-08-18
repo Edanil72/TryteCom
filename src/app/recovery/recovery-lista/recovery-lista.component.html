@@ -1,0 +1,58 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col">
+      <h1>Informação do ficheiro</h1>
+      <div class="dropdown">
+        <hr>
+        <form class="needs-validation" novalidate #f="ngForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationCustom01">Nome do Ficheiro</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="Introduza o nome do ficheiro" required
+                     [(ngModel)]="model.name" #name="ngModel" name="name">
+              <div class="invalid-feedback">
+                Por favor, introduza o nome de um ficheiro válido.
+              </div>
+              <div class="valid-feedback">
+                Tudo certo!
+              </div>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="inputEstado">Tipo de Ficheiro</label>
+              <select id="inputEstado" required class="form-control place_holder dropdown"
+                      [(ngModel)]="model.choice" #choice="ngModel" name="choice">
+                <!--
+                                <select class="form-select" id="validationDefault04" required>
+                -->
+                <!--<option selected="selected" style=" display: none;">Selecione o tipo de ficheiro</option>-->
+                <!--<option selected disabled value style=" display: none;">Selecione o tipo de ficheiro</option>-->
+                <!--
+                                 <option selected disabled value="">Selecione o tipo de ficheiro</option>
+
+                -->
+                <option [ngValue]="null" [disabled]="true" hidden value="">Selecione o tipo de ficheiro</option>
+                <option name="EAE" value="/recovery-form">EAE</option>
+                <option name="DDR" value="negative">DDR</option>
+              </select>
+
+              <div class="invalid-feedback">
+                Por favor, seleciona um tipo de ficheiro válido.
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" [disabled]="!f.valid" type="submit">Continuar</button>
+        </form>
+        <!--<button class="btn btn-secondary dropdown-toggle" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+          Tipo
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" (click)="listarEAE()">EAE</a>
+          <a class="dropdown-item"(click)="listarTDO()">DDR</a>
+        </div>-->
+      </div>
+    </div>
+  </div>
+</div>

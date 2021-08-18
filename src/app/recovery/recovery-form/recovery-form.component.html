@@ -1,0 +1,52 @@
+<div class="container">
+
+<!--  <div class="form-group">
+    &lt;!&ndash;
+        <input type="text" class="form-control" placeholder="Pesquisar Ficheiro" [(ngModel)]="tableEae">
+    &ndash;&gt;
+    <input type="text" class="form-control" placeholder="Pesquisar Ficheiro" [(ngModel)]="tableEae">
+
+  </div>-->
+  <h1 class="mt-4">Ficheiro EAE</h1>
+  <ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Listar</li>
+  </ol>
+  <form>
+      <div class="btn-group">
+        <button>Recovery</button>
+      </div>
+    </form>
+  <br />
+  <div class="row">
+  </div>
+    <div>
+      <table  class="table">
+        <thead class="thead-light text-center">
+        <tr>
+          <th scope="col" class="w-25">Cnt.Debito</th>
+          <th scope="col" class="w-25">Desc.Debito</th>
+          <th scope="col" class="w-25">Cnt.Credito</th>
+          <th scope="col" class="w-25">Desc.Credito</th>
+          <th scope="col" class="w-25">Montante</th>
+          <th scope="col" class="w-25">Erro</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let eae of eae">
+          <td>{{ eae.account_id }}</td>
+          <td>{{ eae.transactAmount }}</td>
+          <td>{{ eae.credSyntAccountNum }}</td>
+          <td>{{ eae.creditCurrency }}</td>
+          <td>{{ eae.creditAmount }}</td>
+          <td>{{ eae.status }}</td>
+        </tr>
+        <tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-3">
+        <button type="button" (click)="voltar()" class="btn btn-danger ml-1">Voltar</button>
+      </div>

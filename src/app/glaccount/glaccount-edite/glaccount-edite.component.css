@@ -1,0 +1,35 @@
+p {
+  font-size: clamp(1em, 1em + 1vw, 1.5em);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+.add-ficheiro {
+  margin-bottom: 30px;
+}
+
+.list-ficheiro {
+  margin-bottom: 50px;
+}
+
+.btn-add-ficheiro {
+  margin-right: 10px;
+}

@@ -1,0 +1,54 @@
+<h1 class="mt-4">Gl Account</h1>
+
+<div class="container-fluid mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <!-- GlAccountingAccount Column -->
+    <ng-container matColumnDef="glaccountingaccount">
+      <th mat-header-cell *matHeaderCellDef> GlAccountingAccount </th>
+      <td mat-cell *matCellDef="let element"> {{element.glaccountingaccount}} </td>
+    </ng-container>
+
+    <!-- GlAccounting Column -->
+    <ng-container matColumnDef="glaccounting">
+      <th mat-header-cell *matHeaderCellDef> GlAccounting </th>
+      <td mat-cell *matCellDef="let element"> {{element.glaccounting}} </td>
+    </ng-container>
+
+    <!-- GlCurency Column -->
+    <ng-container matColumnDef="glcurency">
+      <th mat-header-cell *matHeaderCellDef> GlCurency </th>
+      <td mat-cell *matCellDef="let element"> {{element.glcurency}} </td>
+    </ng-container>
+
+    <!-- GlDescription Column -->
+    <ng-container matColumnDef="gldescription">
+      <th mat-header-cell *matHeaderCellDef> GlDescription </th>
+      <td mat-cell *matCellDef="let element"> {{element.gldescription}} </td>
+    </ng-container>
+
+    <!-- GlNumber Column -->
+    <ng-container matColumnDef="glnumber">
+      <th mat-header-cell *matHeaderCellDef> GlNumber </th>
+      <td mat-cell *matCellDef="let element"> {{element.glnumber}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[2, 4, 6]"
+    showFirstLastButtons 
+    aria-label="Select page of periodic elements">
+  </mat-paginator>
+
+</div>
+
+
